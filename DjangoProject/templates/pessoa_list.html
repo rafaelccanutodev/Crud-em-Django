@@ -33,7 +33,7 @@
         <td>{{ pessoa.sexo }}</td>
         <td>{{ pessoa.telefone }}</td>
         <td>
-            <a href="{% url 'pessoa_delete' pessoa.id %}">
+            <a href="{% url 'pessoa_delete' pessoa.id %}" onclick="return confirm('Tem certeza que deseja deletar este contato?');">
                 <button type="submit" class="btn btn-danger">Deletar</button>
             </a>
             <a href="{% url 'edit_pessoa' pessoa.id %}">
